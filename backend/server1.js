@@ -9,9 +9,9 @@ const path = require('path');
 // ==========================================
 // CONFIGURACIÓN TWILIO (WHATSAPP)
 // ==========================================
-const accountSid = '***REMOVED***'; // Tu SID proporcionado
+const accountSid = process.env.TWILIO_ACCOUNT_SID; // Tu SID proporcionado
 //const authToken = process.env.TWILIO_AUTH_TOKEN || 'COLOCA_TU_AUTH_TOKEN_AQUI'; // <--- ¡IMPORTANTE! PON TU TOKEN AQUÍ O EN .ENV
-const authToken = '21c4140e336e12060e2d816d83f9553c' ; // <--- ¡IMPORTANTE! PON TU TOKEN AQUÍ O EN .ENV
+const authToken = process.env.TWILIO_AUTH_TOKEN; ; // <--- ¡IMPORTANTE! PON TU TOKEN AQUÍ O EN .ENV
 const clientTwilio = require('twilio')(accountSid, authToken);
 
 // Números de teléfono
